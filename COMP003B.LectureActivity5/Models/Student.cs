@@ -8,13 +8,12 @@ namespace COMP003B.LectureActivity5.Models
         public int StudentId { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         [Required]
         [EmailAddress]
+        public required string Email { get; set; }
 
-        public string Email { get; set; }
-
-        public virtual ICollection<Enrollment>? Enrollment { get; set; }
+        public virtual ICollection<Enrollment>? Enrollments { get; set; }
     }
 }
